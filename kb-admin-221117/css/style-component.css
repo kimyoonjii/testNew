@@ -1,0 +1,180 @@
+@charset 'utf-8';
+
+/* --------------------------  */
+/* variable                    */
+/* --------------------------  */
+
+:root {
+  --red: rgba(255, 59, 48, 1);
+  --red-dark: rgba(255, 69, 58, 1);
+  --orange: rgba(255, 149, 0, 1);
+  --orange-dark: rgba(255, 159, 10, 1);
+  --yellow: rgba(255, 204, 0, 1);
+  --yellow-dark: rgba(255, 214, 10, 1);
+  --green: rgba(40, 205, 65, 1);
+  --green-dark: rgba(50, 215, 75, 1);
+  --mint: rgba(0, 199, 190, 1);
+  --mint-dark: rgba(102, 212, 207, 1);
+  --teal: rgba(89, 173, 196, 1);
+  --teal-dark: rgba(106, 196, 220, 1);
+  --cyan: rgba(85, 190, 240, 1);
+  --cyan-dark: rgba(90, 200, 245, 1);
+  --blue: rgba(0, 122, 255, 1);
+  --blue-dark: rgba(10, 132, 255, 1);
+  --indigo: rgba(88, 86, 214, 1);
+  --indigo-dark: rgba(94, 92, 230, 1);
+  --purple: rgba(175, 82, 222, 1);
+  --purple-dark: rgba(191, 90, 242, 1);
+  --pink: rgba(255, 45, 85, 1);
+  --pink-dark: rgba(255, 55, 95, 1);
+  --brown: rgba(162, 132, 94, 1);
+  --brown-dark: rgba(172, 142, 104, 1);
+  --gray: rgba(142, 142, 147, 1);
+  --gray-dark: rgba(152, 152, 157, 1);
+  --gray-2: rgba(174, 174, 178, 1);
+  --gray-3: rgba(199, 199, 204, 1);
+  --gray-4: rgba(209, 209, 214, 1);
+  --gray-5: rgba(229, 229, 234, 1);
+  --gray-6: rgba(242, 242, 247, 1);
+  --gray-dark-2: rgba(99, 99, 102, 1);
+  --gray-dark-3: rgba(72, 72, 74, 1);
+  --gray-dark-4: rgba(58, 58, 60, 1);
+  --gray-dark-5: rgba(44, 44, 46, 1);
+  --gray-dark-6: rgba(28, 28, 30, 1);
+}
+
+
+/* ------------------------------  */
+/* color guide (span.color-box)    */
+/* ------------------------------  */
+table.content-line {width: 100%; font-size: 12px; color: #666666; text-align: left; background-color: #ffffff;}
+table.content-line th,
+table.content-line td {box-sizing: border-box;}
+table.content-line thead {border-bottom: 1px solid #333333; font-weight: 700; color: #333333;}
+table.content-line thead tr + tr {border-top: 1px solid #e6e6e6;}
+table.content-line thead th {padding: 0.5em 1em 0.5em 0;}
+table.content-line tbody tr {border-bottom: 1px solid #e6e6e6;}
+table.content-line tbody th,
+table.content-line tbody td {padding: 0.4em 1em 0.4em 0;}
+table.content-line tbody th {font-weight: 700; color: #333333;}
+table.content-line [rowspan]:not(:first-child) {padding-left: 1em;}
+table.content-line .dark {background-color: #000000; color: #ffffff;}
+table.content-line .dark + td {padding-left: 0.4em;}
+table.content-line span.tag {display: inline-block; font-size: 0.9em; border: 1px solid var(--green); color: var(--green); background-color: #ffffff; border-radius: 5em; padding: 0.2em 0.8em;}
+
+table span.color-box {display: inline-block; min-width: 80px; line-height: 16px; border-radius: 6px; padding: 12px 10px; box-sizing: border-box; color: #ffffff; background-color: var(--gray); margin-left: 0.5em;}
+table span.red {background-color: var(--red);}
+table span.red-dark {background-color: var(--red-dark);}
+table span.orange {background-color: var(--orange);}
+table span.orange-dark {background-color: var(--orange-dark);}
+table span.yellow {background-color: var(--yellow);}
+table span.yellow-dark {background-color: var(--yellow-dark);}
+table span.green {background-color: var(--green);}
+table span.pan.green-dark {background-color: var(--green-dark);}
+table span.mint {background-color: var(--mint);}
+table span.mint-dark {background-color: var(--mint-dark);}
+table span.teal {background-color: var(--teal);}
+table span.teal-dark {background-color: var(--teal-dark);}
+table span.cyan {background-color: var(--cyan);}
+table span.cyan-dark {background-color: var(--cyan-dark);}
+table span.blue {background-color: var(--blue);}
+table span.blue-dark {background-color: var(--blue-dark);}
+table span.indigo {background-color: var(--indigo);}
+table span.indigo-dark {background-color: var(--indigo-dark);}
+table span.purple {background-color: var(--purple);}
+table span.purple-dark {background-color: var(--purple-dark);}
+table span.pink {background-color: var(--pink);}
+table span.pink-dark {background-color: var(--pink-dark);}
+table span.brown {background-color: var(--brown);}
+table span.brown-dark {background-color: var(--brown-dark);}
+table span.gray {background-color: var(--gray);}
+table span.gray-dark {background-color: var(--gray-dark);}
+table span.gray-2 {background-color: var(--gray-2);}
+table span.gray-dark-2 {background-color: var(--gray-dark-2);}
+table span.gray-3 {background-color: var(--gray-3);}
+table span.gray-dark-3 {background-color: var(--gray-dark-3);}
+table span.gray-4 {background-color: var(--gray-4);}
+table span.gray-dark-4 {background-color: var(--gray-dark-4);}
+table span.gray-5 {background-color: var(--gray-5);}
+table span.gray-dark-5 {background-color: var(--gray-dark-5);}
+table span.gray-6 {background-color: var(--gray-6);}
+table span.gray-dark-6 {background-color: var(--gray-dark-6);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+// transition
+transition: border-color 0.2s cubic-bezier(.25,.75,.5,1.25) 0s;
+
+// variable
+:root {--indigo: #6610f2;}
+.btn {background-color: var(--indigo);}
+
+// animation
+animation: name duration timing-function delay iteration-count direction fill-mode play-state
+duration: 0(default), time, initial, inherit
+timing-function: ease(default), linear, ease-in, ease-out, ease-in-out, step-start, step-end, steps(int, start|end), cubic-bezier(n, n, n, n), initial, inherit
+deley: 0s(default), time, initial, inherit
+direction: normal(default), reverse, alternate, alternate-reverse, initial, inherit
+iteration-count: 1(default), number, infinite, initial, inherit
+fill-mode: none(default), forwards, backwards, both, initial, inherit
+play-state: running(default), paused, initial, inherit  (IE에서는 축약표현에 포함시 동작하지 않음, 별도로 사용)
+
+[최종 사용 예시]
+animation: main-bg-animation 3s ease-out 0s 1 normal forwards;
+animation-play-state: running;
+
+@keyframes main-bg-animation {
+    0% {opacity: 1; transform: rotate(0) scale(1);}
+    100% {opacity: 0; transform: rotate(-3deg) scale(1.2);}
+}
+
+// font-awesome css
+span::before {content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 700;}
+
+
+*/

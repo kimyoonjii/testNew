@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <base href="../../">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1400, viewport-fit=cover">
+    <meta name="author" content="DinoWorks Inc. 디노웍스(주)">
+    <meta name="apple-mobile-web-app-title" content="디노웍스 교육관리시스템">
+    <title>Table | Component | FRONT GUIDE | 디노웍스 교육관리시스템</title>
+    <meta name="description" content="디노웍스 교육관리시스템 Front Guide Component Table 페이지">
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="./lib/fontawesome/css/all.min.css" rel="stylesheet">
+    <script src="./lib/jquery/jquery-3.6.1.min.js"></script>
+    <link href="./css/web-font.css" rel="stylesheet">
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/style-component.css" rel="stylesheet">
+    <script src="./js/dino-common.js"></script>
+  </head>
+  <body class="sub guide component table">
+    <div id="wrapper">
+      <a href="#main" id="skip-nav">본문 바로가기</a>
+      <header id="header">
+        <section id="header-top">
+          <div class="logo">
+            <h1>
+              <a href="./page/overview/dashboard.html">
+                <img alt="" src="./img/logo.png">
+                <span class="title">디노웍스 교육관리시스템</span>
+              </a>
+            </h1>
+          </div>
+          <div class="user">
+            <a href="#">
+              <span class="photo" style="background-image: url(./img/common/sample_face.jpg);"></span>
+              <span class="name"><em>이시영</em> (시스템관리자)</span>
+            </a>
+          </div>
+          <ul class="top-menu">
+            <li><a href="./index.html" title="로그아웃"><i class="fa-solid fa-sign-out fa-fw"><span>로그아웃</span></i></a></li>
+            <li><a href="#" title="비밀번호 변경"><i class="fa-solid fa-lock fa-fw"><span>비밀번호 변경</span></i><span class="warn">경고알림</span></a></li>
+            <li><a href="#" title="개인정보 변경"><i class="fa-solid fa-user-gear fa-fw"><span>개인정보 변경</span></i></a></li>
+            <li><a href="#" title="웹페이지 바로가기" target="_blank"><i class="fa-solid fa-display fa-fw"><span>웹페이지 바로가기</span></i></a></li>
+            <li><a href="#" title="알림"><i class="fa-regular fa-bell fa-fw"><span>알림</span></i><span class="push">34</span></a></li>
+            <li><a href="#" title="사이트설정"><i class="fa-solid fa-gear fa-fw"><span>사이트설정</span></i></a></li>
+          </ul>
+        </section>
+
+        <section id="gnb" class="custom-scroll">
+          <h2 class="ir-hidden">GNB</h2>
+          <nav>
+            <h3 data-menu="overview">OVERVIEW</h3>
+            <ul class="nav">
+              <li data-menu="dashboard">
+                <a href="./page/overview/dashboard.html"><i class="fa-solid fa-grip"></i></i><span>Dashboard</span></a>
+              </li>
+              <!--
+              <li data-menu="mypage">
+                <a href="#"><i class="fa-solid fa-user-gear"></i><span>My Page</span></a>
+                <ul>
+                  <li data-menu="info"><a href="#">개인정보관리 개인정보관리 개인정보관리 개인정보관리</a></li>
+                  <li data-menu="password"><a href="#">비밀번호변경</a></li>
+                </ul>
+              </li>
+      -->
+            </ul>
+
+            <h3 data-menu="guide">FRONT GUIDE</h3>
+            <ul class="nav">
+              <li data-menu="color">
+                <a href="./page/guide/color.html"><i class="fa-solid fa-palette fa-fw"></i><span>Color</span></a>
+              </li>
+              <li data-menu="component">
+                <a href="#"><i class="fa-solid fa-cubes fa-fw"></i><span>Component</span></a>
+                <ul>
+                  <li data-menu="layout"><a href="./page/guide/component-layout.html">Layout</a></li>
+                  <li data-menu="table"><a href="./page/guide/component-table.html">table</a></li>
+                  <li data-menu="button"><a href="./page/guide/component-button.html">Button</a></li>
+                  <li data-menu="form"><a href="./page/guide/component-form.html">Form</a></li>
+                  <li data-menu="file"><a href="./page/guide/component-file.html">File</a></li>
+                </ul>
+              </li>
+            </ul>
+
+          </nav>
+        </section>
+      </header>
+
+      <main id="main">
+        <h2>TABLE</h2>
+        <p>The most complete user interface framework that can be used to create stunning admin dashboards and presentation websites.</p>
+
+        <section class="layout-box">
+          <section>
+            <h3>Table (table.content)</h3>
+            <div class="table-box">
+              <p class="guide">* 단위 : <em>USD</em></p>
+              <table class="content">
+                <caption>콘텐츠 테이블</caption>
+                <colgroup>
+                  <col style="width: 60px;" />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th rowspan="2">구분</th>
+                    <th colspan="2">컬럼A</th>
+                    <th colspan="2">컬럼B</th>
+                    <th rowspan="2">비고</th>
+                  </tr>
+                  <tr>
+                    <th>컬럼2</th>
+                    <th>컬럼3</th>
+                    <th>컬럼4</th>
+                    <th>컬럼5</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>내용2</td>
+                    <td>내용3</td>
+                    <td>내용4</td>
+                    <td>내용5</td>
+                    <td>비고</td>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <td>내용2</td>
+                    <td>내용3</td>
+                    <td>내용4</td>
+                    <td>내용5</td>
+                    <td>비고</td>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <td>내용2</td>
+                    <td>내용3</td>
+                    <td>내용4</td>
+                    <td>내용5</td>
+                    <td>비고</td>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <td>내용2</td>
+                    <td>내용3</td>
+                    <td>내용4</td>
+                    <td>내용5</td>
+                    <td>비고</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th rowspan="2">합계</th>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td rowspan="2">-</td>
+                  </tr>
+                  <tr>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="layout-box">
+          <section>
+            <h3>Table (table.layout)</h3>
+            <div class="table-box">
+              <p class="guide"><em>*</em> 표시는 필수 입력 항목입니다.</p>
+              <p class="guide">* 단위 : <em>USD</em></p>
+              <table class="layout">
+                <tbody>
+                  <tr>
+                    <td class="th">레이블</td>
+                    <td>기본 형태 (상세보기)</td>
+                    <td class="th">레이블</td>
+                    <td>기본 형태 (상세보기)</td>
+                  </tr>
+                  <tr>
+                    <td class="th long"><label for="">레이블 레이블<br />레이블 레이블 레이블</label></td>
+                    <td colspan="3">레이블이 긴 경우 (long)</td>
+                  </tr>
+                  <tr>
+                    <td class="th">레이블</td>
+                    <td>
+                      <p>사이버뿌리기술지원센터 관련하여 아래의 2가지 요청드립니다. 사이버뿌리기술지원센터 관련하여 아래의 2가지 요청드립니다. 사이버뿌리기술지원센터 관련하여 아래의 2가지 요청드립니다. 사이버뿌리기술지원센터 관련하여 아래의 2가지 요청드립니다. 사이버뿌리기술지원센터 관련하여 아래의 2가지 요청드립니다.<br />(긴 문장)</p>
+                    </td>
+                    <td class="th">레이블</td>
+                    <td><input type="text" /></td>
+                  </tr>
+                  <tr>
+                    <td class="th">레이블</td>
+                    <td>폼 연계</td>
+                    <td class="th"><em>*</em><label for="">레이블</label></td>
+                    <td><input type="text" style="font: inherit; height: 2.3em; box-sizing: border-box; padding: 0; margin: 0; border: 1px solid #e0e0e0;" /></td>
+                  </tr>
+                  <tr>
+                    <td class="th">레이블</td>
+                    <td>폼 연계</td>
+                    <td class="th"><em>*</em><label for="">레이블</label></td>
+                    <td><textarea style="font: inherit; height: 10em; width: 100%; box-sizing: border-box; padding: 0; margin: 0; border: 1px solid #e0e0e0;"></textarea></td>
+                  </tr>
+                  <tr>
+                    <td class="th" rowspan="2">레이블</td>
+                    <td rowspan="2">병합(border 테스트)</td>
+                    <td class="th">레이블</td>
+                    <td>정보</td>
+                  </tr>
+                  <tr>
+                    <td class="th">레이블</td>
+                    <td>정보</td>
+                  </tr>
+                  <tr>
+                    <td class="th">레이블</td>
+                    <td>정보</td>
+                    <td class="th" rowspan="2">레이블</td>
+                    <td rowspan="2">병합(border 테스트)</td>
+                  </tr>
+                  <tr>
+                    <td class="th">레이블</td>
+                    <td>정보</td>
+                  </tr>
+                  <tr>
+                    <td class="th" rowspan="2">레이블</td>
+                    <td>레이블만 병합(border 테스트)</td>
+                    <td class="th">레이블</td>
+                    <td>정보</td>
+                  </tr>
+                  <tr>
+                    <td>정보</td>
+                    <td class="th">레이블</td>
+                    <td>정보</td>
+                  </tr>
+                  <tr>
+                    <td class="th">레이블</td>
+                    <td>정보</td>
+                    <td class="th" rowspan="3">레이블</td>
+                    <td>레이블만 병합(border 테스트)</td>
+                  </tr>
+                  <tr>
+                    <td class="th">레이블</td>
+                    <td>정보</td>
+                    <td>정보</td>
+                  </tr>
+                  <tr>
+                    <td class="th">레이블</td>
+                    <td>정보</td>
+                    <td>정보</td>
+                  </tr>
+                  <tr>
+                    <td class="th">내부 테이블</td>
+                    <td colspan="3">
+                      <div class="table-box">
+                        <table class="content">
+                          <caption>콘텐츠 테이블</caption>
+                          <colgroup>
+                            <col style="width: 60px;" />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th rowspan="2">구분</th>
+                              <th colspan="2">컬럼A</th>
+                              <th colspan="2">컬럼B</th>
+                              <th rowspan="2">비고</th>
+                            </tr>
+                            <tr>
+                              <th>컬럼2</th>
+                              <th>컬럼3</th>
+                              <th>컬럼4</th>
+                              <th>컬럼5</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th>1</th>
+                              <td>내용2</td>
+                              <td>내용3</td>
+                              <td>내용4</td>
+                              <td>내용5</td>
+                              <td>비고</td>
+                            </tr>
+                            <tr>
+                              <th>1</th>
+                              <td>내용2</td>
+                              <td>내용3</td>
+                              <td>내용4</td>
+                              <td>내용5</td>
+                              <td>비고</td>
+                            </tr>
+                            <tr>
+                              <th>1</th>
+                              <td>내용2</td>
+                              <td>내용3</td>
+                              <td>내용4</td>
+                              <td>내용5</td>
+                              <td>비고</td>
+                            </tr>
+                            <tr>
+                              <th>1</th>
+                              <td>내용2</td>
+                              <td>내용3</td>
+                              <td>내용4</td>
+                              <td>내용5</td>
+                              <td>비고</td>
+                            </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <th rowspan="2">합계</th>
+                              <td>100</td>
+                              <td>100</td>
+                              <td>100</td>
+                              <td>100</td>
+                              <td rowspan="2">-</td>
+                            </tr>
+                            <tr>
+                              <td>100</td>
+                              <td>100</td>
+                              <td>100</td>
+                              <td>100</td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="layout-box">
+          <section>
+            <h3>Table (table.list)</h3>
+            <div class="table-box">
+              <p class="guide">* 단위 : <em>USD</em></p>
+              <table class="list">
+                <caption>리스트 테이블</caption>
+                <colgroup>
+                  <col style="width: 60px;" />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th rowspan="2">구분</th>
+                    <th colspan="4">컬럼A</th>
+                    <th colspan="3">컬럼B</th>
+                    <th rowspan="2">비고</th>
+                  </tr>
+                  <tr>
+                    <th>컬럼1</th>
+                    <th>컬럼2</th>
+                    <th>컬럼3</th>
+                    <th>컬럼4</th>
+                    <th>컬럼5</th>
+                    <th>컬럼6</th>
+                    <th>컬럼7</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
+                    <td>내용1</td>
+                    <td>내용2</td>
+                    <td>내용3</td>
+                    <td>내용4</td>
+                    <td>내용5</td>
+                    <td>내용6</td>
+                    <td>내용6</td>
+                    <td>비고</td>
+                  </tr>
+                  <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
+                    <td>내용1</td>
+                    <td>내용2</td>
+                    <td>내용3</td>
+                    <td>내용4</td>
+                    <td>내용5</td>
+                    <td>내용6</td>
+                    <td>내용6</td>
+                    <td>비고</td>
+                  </tr>
+                  <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
+                    <td>내용1</td>
+                    <td>내용2</td>
+                    <td>내용3</td>
+                    <td>내용4</td>
+                    <td>내용5</td>
+                    <td>내용6</td>
+                    <td>내용6</td>
+                    <td>비고</td>
+                  </tr>
+                  <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
+                    <td>내용1</td>
+                    <td>내용2</td>
+                    <td>내용3</td>
+                    <td>내용4</td>
+                    <td>내용5</td>
+                    <td>내용6</td>
+                    <td>내용6</td>
+                    <td>비고</td>
+                  </tr>
+                  <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
+                    <td>내용1</td>
+                    <td>내용2</td>
+                    <td>내용3</td>
+                    <td>내용4</td>
+                    <td>내용5</td>
+                    <td>내용6</td>
+                    <td>내용6</td>
+                    <td>비고</td>
+                  </tr>
+                  <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
+                    <td>내용1</td>
+                    <td>내용2</td>
+                    <td>내용3</td>
+                    <td>내용4</td>
+                    <td>내용5</td>
+                    <td>내용6</td>
+                    <td>내용6</td>
+                    <td>비고</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th rowspan="2">합계</th>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td rowspan="2">-</td>
+                  </tr>
+                  <tr>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="layout-box">
+          <section>
+            <h3>Table (table.content-line)</h3>
+            <table class="content-line">
+              <caption>Color 가이드 표</caption>
+              <colgroup>
+                <col style="width: 100px;">
+                <col span="9">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th rowspan="2">컬러명</th>
+                  <th colspan="4">Basic</th>
+                  <th colspan="4">Dark</th>
+                  <th rowspan="2">비고</th>
+                </tr>
+                <tr>
+                  <th>RGBA</th>
+                  <th>HEX</th>
+                  <th>var</th>
+                  <th>class</th>
+                  <th>RGBA</th>
+                  <th>HEX</th>
+                  <th>var</th>
+                  <th>class</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Red</th>
+                  <td><span class="color-box red">rgba(255, 59, 48, 1)</span></td>
+                  <td><span class="color-box red">#ff3b30</span></td>
+                  <td>var(--red)</td>
+                  <td>.red</td>
+                  <td class="dark"><span class="color-box red-dark">rgba(255, 69, 58, 1)</span></td>
+                  <td class="dark"><span class="color-box red-dark">#ff453a</span></td>
+                  <td>var(--red-dark)</td>
+                  <td>.red-dark</tdclass=>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th>Orange</th>
+                  <td><span class="color-box orange">rgba(255, 149, 0, 1)</span></td>
+                  <td><span class="color-box orange">#ff9500</span></td>
+                  <td>var(--orange)</td>
+                  <td>.orange</td>
+                  <td class="dark"><span class="color-box orange-dark">rgba(255, 159, 10, 1)</span></td>
+                  <td class="dark"><span class="color-box orange-dark">#ff9f0a</span></td>
+                  <td>var(--orange-dark)</td>
+                  <td>.orange-dark</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Yellow</th>
+                  <td><span class="color-box yellow">rgba(255, 204, 0, 1)</span></td>
+                  <td><span class="color-box yellow">#ffcc00</span></td>
+                  <td>var(--yellow)</td>
+                  <td>.yellow</td>
+                  <td class="dark"><span class="color-box yellow-dark">rgba(255, 214, 10, 1)</span></td>
+                  <td class="dark"><span class="color-box yellow-dark">#ffd60a</span></td>
+                  <td>var(--yellow-dark)</td>
+                  <td>.yellow-dark</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Green</th>
+                  <td><span class="color-box green">rgba(40, 205, 65, 1)</span></td>
+                  <td><span class="color-box green">#28cd41</span></td>
+                  <td>var(--green)</td>
+                  <td>.green</td>
+                  <td class="dark"><span class="color-box green-dark">rgba(50, 215, 75, 1)</span></td>
+                  <td class="dark"><span class="color-box green-dark">#32d74b</span></td>
+                  <td>var(--green-dark)</td>
+                  <td>.green-dark</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Mint</th>
+                  <td><span class="color-box mint">rgba(0, 199, 190, 1)</span></td>
+                  <td><span class="color-box mint">#00c7be</span></td>
+                  <td>var(--mint)</td>
+                  <td>.mint</td>
+                  <td class="dark"><span class="color-box mint-dark">rgba(102, 212, 207, 1)</span></td>
+                  <td class="dark"><span class="color-box mint-dark">#66d4cf</span></td>
+                  <td>var(--mint-dark)</td>
+                  <td>.mint-dark</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Teal</th>
+                  <td><span class="color-box teal">rgba(89, 173, 196, 1)</span></td>
+                  <td><span class="color-box teal">#59adc4</span></td>
+                  <td>var(--teal)</td>
+                  <td>.teal</td>
+                  <td class="dark"><span class="color-box teal-dark">rgba(106, 196, 220, 1)</span></td>
+                  <td class="dark"><span class="color-box teal-dark">#6ac4dc</span></td>
+                  <td>var(--teal-dark)</td>
+                  <td>.teal-dark</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <p class="copyright">COPYRIGHT ⓒ 2022 SNC LAB, INC. ALL RIGHTS RESERVED.</p>
+      </footer>
+
+    </div> <!-- #wrapper  -->
+
+<script>
+'use strict';
+
+
+
+
+</script>
+
+  </body>
+</html>
+
+

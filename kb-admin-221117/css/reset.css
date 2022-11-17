@@ -1,0 +1,21 @@
+@charset 'utf-8';
+
+/* reset */
+html {-webkit-text-size-adjust: none; text-size-adjust: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+body {margin: 0;}
+main {display: block;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table, blockquote, pre, code {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle; max-width: 100%;}
+li {list-style: none;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle;}
+i[class^="fa"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute !important; left: -9999px !important;}
+
+
+
+

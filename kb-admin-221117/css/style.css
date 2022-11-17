@@ -1,0 +1,187 @@
+@charset 'utf-8';
+
+/* common (include, layout) */
+body {font-family: 'NotoSansKR', '나눔고딕', 'NanumGothic', '맑은 고딕', 'malgun gothic', '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif; font-weight: 400; font-size: 12px; color: #333333 ; background: #ffffff;}
+#wrapper {overflow: hidden;}
+#skip-nav {position: fixed; left: 0; top: -41px; width: 100%; line-height: 40px; text-align: center; font-size: 16px; color: #ffffff; background: rgba(0, 0, 0, 0.5); border-bottom: 1px solid rgba(255, 255, 255, 0.7); transition: top 0.3s; z-index: 100000;}
+#skip-nav:focus {top: 0;}
+
+#header-top {position: fixed; left: 0; top: 0; width: 100%; height: 64px; box-sizing: border-box; min-width: 1200px; z-index: 10000; background-image: linear-gradient(154deg, #008fe2 0, #00b29c 100%);}
+#header-top div.logo {position: absolute; left: 0; top: 0; width: 220px; height: 100%; background-color: rgba(255, 255, 255, 0.1); overflow: hidden;}
+#header-top div.logo h1 {position: absolute; left: 20px; top: 50%; transform: translate(0, -55%);}
+#header-top div.logo h1 > a {display: block;}
+#header-top div.logo h1 > a img {max-width: 160px; max-height: 50px;}
+#header-top div.logo h1 span.title {position: absolute; left: 52px; bottom: 5px; font-size: 10px; color: #ffffff; font-weight: 400; width: 200px; opacity: 0.8;}
+#header-top div.user {position: absolute; left: 250px; top: 50%; transform: translate(0, -50%); color: #ffffff; font-size: 13px;}
+#header-top div.user span.photo {display: inline-block; vertical-align: middle; width: 40px; height: 40px; border-radius: 100px; background: #ffffff url(../img/common/icon_face.png) center center no-repeat; background-size: cover;}
+#header-top div.user span.name {vertical-align: middle; margin-left: 10px;}
+#header-top div.user span.name em {font-size: 16px;}
+#header-top ul.top-menu {position: absolute; right: 24px; top: 50%; transform: translate(0, -50%);}
+#header-top ul.top-menu > li {float: left;}
+#header-top ul.top-menu > li + li {margin-left: 6px;}
+#header-top ul.top-menu > li > a {position: relative; display: block; width: 40px; height: 40px; box-sizing: border-box; border-radius: 3px; border: 2px solid rgba(255, 255, 255, 0.5); font-size: 18px; color: rgba(255, 255, 255, 0.8); transition: all 0.3s;}
+#header-top ul.top-menu > li > a i {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#header-top ul.top-menu > li > a:hover {color: rgba(255, 255, 255, 1); border-color: rgba(255, 255, 255, 0.7); background-color: rgba(255, 255, 255, 0.1);}
+#header-top ul.top-menu > li > a span.warn {position: absolute; right: 0; top: 0; width: 10px; height: 10px; transform: translate(50%, -50%); border-radius: 10px; background-color: #e74c3c; text-indent: -999px; overflow: hidden; z-index: 100;}
+#header-top ul.top-menu > li > a span.push {position: absolute; right: 0; top: 0; transform: translate(6px, -50%); padding: 2px 6px; border-radius: 20px; background-color: #ffcc00; font-size: 11px; color: #ffffff; line-height: 1.1em; z-index: 100;}
+
+#gnb {position: fixed; left: 0; top: 64px; width: 220px; height: calc(100% - 64px); box-sizing: border-box; overflow: auto; z-index: 10000; background-color: #ffffff; padding: 20px 10px 100px 15px; color: #8da0aa; font-size: 12px; box-sizing: border-box;}
+body.close #gnb {left: -220px;}
+#gnb h3 {font-size: 14px; font-weight: 400; color: #000000; margin-bottom: 8px;}
+#gnb h3.on {color: #1c82e1; font-weight: 700;}
+#gnb ul.nav > li + li {margin-top: 2px;}
+#gnb ul.nav + h3 {margin-top: 20px;}
+#gnb ul.nav > li > a {position: relative; display: block; line-height: 32px; border: 1px solid transparent; border-radius: 4px; padding-left: 28px; padding-right: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: all 0.3s;}
+#gnb ul.nav > li > a > i:first-child {position: absolute; left: 6px; top: 50%; transform: translate(0, -50%); color: #0093d9; opacity: 0.6; transition: opacity 0.3s;}
+#gnb ul.nav > li > a > i:last-child {position: absolute; right: 8px; top: 50%; transform: translate(0, -50%); font-size: 12px; transition: transform 0.3s;}
+#gnb ul.nav > li.on > a {color: #1c82e1; border-color: #d1d9dd;}
+#gnb ul.nav > li.on > a > i:last-child {transform: translate(0, -50%) rotate(90deg);}
+#gnb ul.nav > li > a:hover {color: #1c82e1; border-color: #d1d9dd; text-decoration: underline;}
+#gnb ul.nav > li > a:hover > i:first-child {opacity: 0.8;}
+#gnb ul.nav > li > ul {overflow: hidden; transition: height 0.3s; font-size: 12px; height: 0;}
+#gnb ul.nav > li.on > ul {height: auto;}
+#gnb ul.nav > li > ul > li {border: 1px solid #f8f9fa;}
+#gnb ul.nav > li > ul > li + li {border-top: none;}
+#gnb ul.nav > li > ul > li:first-child {border-top-left-radius: 4px; border-top-right-radius: 4px; margin-top: 2px;}
+#gnb ul.nav > li > ul > li:last-child {border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; margin-bottom: 2px;}
+#gnb ul.nav > li:last-child > ul > li:last-child {margin-bottom: 0;}
+#gnb ul.nav > li > ul > li > a {position: relative; display: block; line-height: 30px; padding-left: 35px; padding-right: 24px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis; transition: all 0.3s;}
+#gnb ul.nav > li > ul > li > a::before {content: ''; position: absolute; left: 15px; top: 50%; transform: translate(0, -50%); width: 8px; height: 8px; border-radius: 8px; background: #8da0aa; opacity: 0.4; transition: all 0.3s;}
+#gnb ul.nav > li > ul > li.on > a {color: #1c82e1; background-color: #fcfdfe;}
+#gnb ul.nav > li > ul > li > a:hover {color: #1c82e1; background-color: #fcfdfe; text-decoration: underline;}
+#gnb ul.nav > li > ul > li > a:hover::before {background-color: #0093d9;}
+
+body.sub #wrapper {position: relative; padding: 64px 0 100px 220px; background-color: #fafcfe; min-height: 100vh; box-sizing: border-box;}
+body.sub #main {position: relative; background-color: #fafcfe; padding: 15px 25px 100px 25px;}
+body.sub #main > h2 {font-size: 24px; font-weight: 300;}
+body.sub #main > h2 + p {font-size: 12px; opacity: 0.6; margin-bottom: 30px;}
+
+#footer {position: absolute; left: 220px; bottom: 0; width: calc(100% - 220px); height: 30px; box-sizing: border-box; background-image: linear-gradient(154deg, #008fe2 0, #00b29c 100%); font-size: 12px; color: #ffffff;}
+#footer p.copyright {line-height: 30px; text-align: center;}
+
+body.close {}
+body.close #wrapper {padding-left: 0;}
+body.close #header-top div.logo {width: 100px;}
+body.close #gnb {left: -220px;}
+body.close #footer {left: 0; width: 100%;}
+
+
+
+/* login(main) */
+body.main #wrapper {min-width: auto;}
+#main-background {position: fixed; left: 0; top: 0; width: 100%; height: 100%;}
+#main-background::after {content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);}
+#main-background ul.slide {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#main-background ul.slide > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; display: none;}
+#main-background ul.slide > li.on {display: block;}
+#main-background ul.slide > li img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); max-width: none; min-width: 100%; min-height: 100%;}
+
+#login-box {position: fixed; width: 500px; min-height: 300px; left: 50%; top: 50%; transform: translate(-50%, -50%); box-sizing: border-box; border-radius: 3px; background-color: #ffffff; box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5); overflow: hidden; z-index: 100;}
+#login-box div.left {position: absolute; left: 0; top: 0; width: 30%; height: 100%; box-sizing: border-box; padding: 25px 15px; background-image: linear-gradient(180deg, #008fe2 0, #00b29c 100%);}
+#login-box div.left h1 img {max-width: 100%;}
+#login-box div.left h1 span {display: block; font-size: 12px; color: #ffffff; font-weight: normal; opacity: 0.8; margin-top: 10px; line-height: 1.2em;}
+#login-box div.left ul.function {position: absolute; left: 15px; bottom: 15px; font-size: 14px; color: #ffffff;}
+#login-box div.left ul.function > li {float: left;}
+#login-box div.left ul.function > li + li {margin-left: 10px;}
+#login-box div.right {position: relative; left: 30%; width: 70%; height: 100%; box-sizing: border-box; padding: 25px 40px 50px 40px; background-color: #ffffff;}
+#login-box div.right h2 {font-weight: 400; font-size: 24px; text-align: center; margin-bottom: 20px;}
+#login-box ul.login-form > li + li {margin-top: 6px;}
+#login-box ul.login-form a.login {display: block; font-size: 16px; line-height: 2.6em; width: 100%; box-sizing: border-box; text-align: center; background-color: #00b29c; color: #ffffff; border-radius: 3px;}
+
+.input-label {position: relative; padding-top: 5px; font-size: 16px; color: #2b2f33;}
+.input-label > input {
+  position: relative; display: block; box-sizing: border-box; outline: none;
+  font: inherit; height: 2.6em; width: 100%; border-radius: 3px; padding: 0 2.4em 0 0.8em;
+  border: 1px solid #dfe8f1; color: #2b2f33; background-color: #ffffff; transition: all 0.3s; -webkit-appearance: none; appearance: none;
+}
+.input-label > label {position: absolute; left: 1em; top: calc(50% + 2.5px); padding: 1px 4px; transform: translate(0, -50%); font-size: 1em; background-color: #ffffff; z-index: 100; opacity: 0.3; transition: all 0.3s;}
+.input-label > input:focus {border-color: #3da6ff; box-shadow: 0 0 3px 0 rgb(102, 175, 233, 0.4); z-index: 10;}
+.input-label > input:focus + label {top: 5px; font-size: 0.8em; opacity: 1; color: #3da6ff;}
+.input-label > input.valid {border-color: #1dc9b7;}
+.input-label > input.invalid {border-color: #fd3995; color: #fd3995;}
+
+ul.check-list {position: relative; font-size: 13px;}
+ul.check-list::after {content: ''; display: block; clear: both;}
+ul.check-list > li {float: left; margin-right: 20px; line-height: 2em;}
+ul.check-list input {position: relative; margin: 0; padding: 0; vertical-align: middle; top: -1px;}
+ul.check-list input + label {display: inline-block; padding-left: 5px;}
+
+
+
+
+
+/* module */
+.custom-scroll {overflow: auto; scrollbar-width: thin; scrollbar-color: #e0e0e0; -ms-overflow-style: none;}    /* firefox, IE 고려 */
+.custom-scroll::-webkit-scrollbar {width: 6px;}
+.custom-scroll::-webkit-scrollbar-thumb {background-color: transparent; border-radius: 10px;}
+.custom-scroll:hover::-webkit-scrollbar-thumb {background-color: rgba(0, 0, 0, 0.2);}
+.custom-scroll::-webkit-scrollbar-track {background-color: transparent;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+
+animation 축약 표현
+animation: main-bg-animation 3s ease-out 0.1s 1 normal forwards running;
+animation: name duration timing-function delay iteration-count direction fill-mode play-state
+duration: 0(default), time, initial, inherit
+timing-function: ease(default), linear, ease-in, ease-out, ease-in-out, step-start, step-end, steps(int, start|end), cubic-bezier(n, n, n, n), initial, inherit
+deley: 0s(default), time, initial, inherit
+direction: normal(default), reverse, alternate, alternate-reverse, initial, inherit
+iteration-count: 1(default), number, infinite, initial, inherit
+fill-mode: none(default), forwards, backwards, both, initial, inherit
+play-state: running(default), paused, initial, inherit  (IE에서는 축약표현에 포함시 동작하지 않음, 별도로 사용)
+
+[최종 사용 예시]
+animation: main-bg-animation 3s ease-out 0s 1 normal forwards;
+animation-play-state: running;
+
+@keyframes main-bg-animation {
+    0% {opacity: 1; transform: rotate(0) scale(1);}
+    100% {opacity: 0; transform: rotate(-3deg) scale(1.2);}
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

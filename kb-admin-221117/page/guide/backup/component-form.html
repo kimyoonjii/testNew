@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <base href="../../">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1400, viewport-fit=cover">
+    <meta name="author" content="DinoWorks Inc. 디노웍스(주)">
+    <meta name="apple-mobile-web-app-title" content="디노웍스 교육관리시스템">
+    <title>Form | Component | FRONT GUIDE | 디노웍스 교육관리시스템</title>
+    <meta name="description" content="디노웍스 교육관리시스템 Front Guide Component Form 페이지">
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="./lib/fontawesome/css/all.min.css" rel="stylesheet">
+    <script src="./lib/jquery/jquery-3.6.1.min.js"></script>
+    <link href="./css/web-font.css" rel="stylesheet">
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/style-component.css" rel="stylesheet">
+    <script src="./js/dino-common.js"></script>
+  </head>
+  <body class="sub guide component form">
+    <div id="wrapper">
+      <a href="#main" id="skip-nav">본문 바로가기</a>
+      <header id="header">
+        <section id="header-top">
+          <div class="logo">
+            <h1>
+              <a href="./page/overview/dashboard.html">
+                <img alt="" src="./img/logo.png">
+                <span class="title">디노웍스 교육관리시스템</span>
+              </a>
+            </h1>
+          </div>
+          <div class="user">
+            <a href="#">
+              <span class="photo" style="background-image: url(./img/common/sample_face.jpg);"></span>
+              <span class="name"><em>이시영</em> (시스템관리자)</span>
+            </a>
+          </div>
+          <ul class="top-menu">
+            <li><a href="./index.html" title="로그아웃"><i class="fa-solid fa-sign-out fa-fw"><span>로그아웃</span></i></a></li>
+            <li><a href="#" title="비밀번호 변경"><i class="fa-solid fa-lock fa-fw"><span>비밀번호 변경</span></i><span class="warn">경고알림</span></a></li>
+            <li><a href="#" title="개인정보 변경"><i class="fa-solid fa-user-gear fa-fw"><span>개인정보 변경</span></i></a></li>
+            <li><a href="#" title="웹페이지 바로가기" target="_blank"><i class="fa-solid fa-display fa-fw"><span>웹페이지 바로가기</span></i></a></li>
+            <li><a href="#" title="알림"><i class="fa-regular fa-bell fa-fw"><span>알림</span></i><span class="push">34</span></a></li>
+            <li><a href="#" title="사이트설정"><i class="fa-solid fa-gear fa-fw"><span>사이트설정</span></i></a></li>
+          </ul>
+        </section>
+
+        <section id="gnb" class="custom-scroll">
+          <h2 class="ir-hidden">GNB</h2>
+          <nav>
+            <h3 data-menu="overview">OVERVIEW</h3>
+            <ul class="nav">
+              <li data-menu="dashboard">
+                <a href="./page/overview/dashboard.html"><i class="fa-solid fa-grip"></i></i><span>Dashboard</span></a>
+              </li>
+              <!--
+              <li data-menu="mypage">
+                <a href="#"><i class="fa-solid fa-user-gear"></i><span>My Page</span></a>
+                <ul>
+                  <li data-menu="info"><a href="#">개인정보관리 개인정보관리 개인정보관리 개인정보관리</a></li>
+                  <li data-menu="password"><a href="#">비밀번호변경</a></li>
+                </ul>
+              </li>
+      -->
+            </ul>
+
+            <h3 data-menu="guide">FRONT GUIDE</h3>
+            <ul class="nav">
+              <li data-menu="color">
+                <a href="./page/guide/color.html"><i class="fa-solid fa-palette fa-fw"></i><span>Color</span></a>
+              </li>
+              <li data-menu="component">
+                <a href="#"><i class="fa-solid fa-cubes fa-fw"></i><span>Component</span></a>
+                <ul>
+                  <li data-menu="layout"><a href="./page/guide/component-layout.html">Layout</a></li>
+                  <li data-menu="table"><a href="./page/guide/component-table.html">table</a></li>
+                  <li data-menu="button"><a href="./page/guide/component-button.html">Button</a></li>
+                  <li data-menu="form"><a href="./page/guide/component-form.html">Form</a></li>
+                  <li data-menu="file"><a href="./page/guide/component-file.html">File</a></li>
+                </ul>
+              </li>
+            </ul>
+
+          </nav>
+        </section>
+      </header>
+
+      <main id="main">
+        <h2>FORM</h2>
+        <p>The most complete user interface framework that can be used to create stunning admin dashboards and presentation websites.</p>
+
+        <section class="layout-box">
+          <section>
+            <h3>INPUT - TEXT</h3>
+            <table class="content-line">
+              <caption>폼 요소 형태별 목록</caption>
+              <colgroup>
+                <col style="width: 100px;">
+                <col style="width: 140px;">
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>구분</th>
+                  <th>세부구분</th>
+                  <th>Form 구현</th>
+                  <th>Tag / Class (Selector)</th>
+                  <th>참고사항</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th rowspan="5">최소형</th>
+                  <th>Basic</th>
+                  <td>
+                    <input type="text" name="" id="" class="ct-text" placeholder="xxx@naver.com" value="">
+                  </td>
+                  <td><span class="tag">input.ct-text</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Valid</th>
+                  <td>
+                    <input type="text" name="" id="" class="ct-text valid" placeholder="xxx@naver.com" value="">
+                  </td>
+                  <td><span class="tag">input.ct-text.valid</span></td>
+                  <td>유효성 O</td>
+                </tr>
+                <tr>
+                  <th>Invalid</th>
+                  <td>
+                    <input type="text" name="" id="" class="ct-text invalid" placeholder="xxx@naver.com" value="">
+                  </td>
+                  <td><span class="tag">input.ct-text.invalid</span></td>
+                  <td>유효성 X</td>
+                </tr>
+                <tr>
+                  <th>Readonly</th>
+                  <td>
+                    <input type="text" name="" id="" class="ct-text" readonly="readonly" value="">
+                    <input type="text" name="" id="" class="ct-text" readonly="readonly" value="lsy@naver.com">
+                  </td>
+                  <td><span class="tag">input.ct-text[readonly]</span></td>
+                  <td>readonly</td>
+                </tr>
+                <tr>
+                  <th>Disabled</th>
+                  <td>
+                    <input type="text" name="" id="" class="ct-text" disabled="disabled" value="lsy@naver.com">
+                  </td>
+                  <td><span class="tag">input.ct-text[disabled]</span></td>
+                  <td>disabled</td>
+                </tr>
+
+                <tr>
+                  <th rowspan="12">기본형</th>
+                  <th>Basic</th>
+                  <td>
+                    <div class="ct-form">
+                      <input type="text" name="" id="" class="ct-text" value="">
+                    </div>
+                  </td>
+                  <td><span class="tag">.ct-form > input.ct-text</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Valid</th>
+                  <td>
+                    <div class="ct-form valid">
+                      <input type="text" name="" id="" class="ct-text" value="">
+                    </div>
+                  </td>
+                  <td><span class="tag">.ct-form.valid > input.ct-text</span></td>
+                </tr>
+                <tr>
+                  <th>Invalid</th>
+                  <td>
+                    <div class="ct-form invalid">
+                      <input type="text" name="" id="" class="ct-text" value="">
+                    </div>
+                  </td>
+                  <td><span class="tag">.ct-form.invalid > input.ct-text</span></td>
+                </tr>
+                <tr>
+                  <th>Help</th>
+                  <td>
+                    <div class="ct-form help">
+                      <input type="text" name="" id="" class="ct-text" value="">
+                    </div>
+                  </td>
+                  <td><span class="tag">.ct-form.help > input.ct-text</span></td>
+                </tr>
+                <tr>
+                  <th>icon-left</td>
+                  <td>
+                    <div class="ct-form icon-left">
+                      <input type="text" name="" id="" class="ct-text" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                    </div>
+                    <div class="ct-form icon-left valid">
+                      <input type="text" name="" id="" class="ct-text" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                    </div>
+                    <div class="ct-form icon-left invalid">
+                      <input type="text" name="" id="" class="ct-text" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                    </div>
+                  </td>
+                  <td><span class="tag">.ct-form.icon-left > input.ct-text</span></td>
+                  <td>내부 span.icon 태그</td>
+                </tr>
+                <tr>
+                  <th>icon-right</th>
+                  <td>
+                    <div class="ct-form icon-right">
+                      <input type="text" name="" id="" class="ct-text" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                    </div>
+                    <div class="ct-form icon-right valid">
+                      <input type="text" name="" id="" class="ct-text" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                    </div>
+                    <div class="ct-form icon-right invalid">
+                      <input type="text" name="" id="" class="ct-text" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                    </div>
+                  </td>
+                  <td><span class="tag">.ct-form.icon-right > input.ct-text</span></td>
+                  <td>유효성 표시 숨김</td>
+                </tr>
+                <tr>
+                  <th>Label</th>
+                  <td>
+                    <div class="ct-form label icon-left">
+                      <label for="reg-label-1"><em>*</em>E-mail</label>
+                      <input type="text" name="" id="reg-label-1" class="ct-text" value="">
+                    </div>
+                    <div class="ct-form label icon-left">
+                      <label for="reg-label-1"><em>*</em>E-mail</label>
+                      <input type="text" name="" id="reg-label-1" class="ct-text" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                    </div>
+                    <div class="ct-form label icon-left invalid">
+                      <label for="reg-label-1"><em>*</em>E-mail</label>
+                      <input type="text" name="" id="reg-label-1" class="ct-text" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                    </div>
+                  </td>
+                  <td><span class="tag">.ct-form > input.ct-text</span></td>
+                  <td>내부 label 태그</td>
+                </tr>
+                <tr>
+                  <td>help</td>
+                  <td>
+                    <div class="ct-form">
+                      <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      <span class="help">
+                        <a href="#"><em>입력안내</em></a>
+                        <span class="guide">주로 사용하는 이메일 주소를 입력해 주세요. 비밀번호 재설정 등 주요 기능에 꼭 필요한 사항입니다.</span>
+                      </span>
+                    </div>
+                    <div class="ct-form label">
+                      <label for=""><em>*</em>E-mail</label>
+                      <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      <span class="help">
+                        <a href="#"><em>입력안내</em></a>
+                        <span class="guide">주로 사용하는 이메일 주소를 입력해 주세요. 비밀번호 재설정 등 주요 기능에 꼭 필요한 사항입니다.</span>
+                      </span>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.valid</span></td>
+                  <td>유효함</td>
+                </tr>
+                <tr>
+                  <td>valid</td>
+                  <td>
+                    <div class="ct-form valid">
+                      <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                    </div>
+                    <div class="ct-form valid icon-left">
+                      <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.valid</span></td>
+                  <td>유효함</td>
+                </tr>
+                <tr>
+                  <td>invalid</td>
+                  <td>
+                    <div class="ct-form invalid">
+                      <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      <span class="error">
+                        <a href="#"><em>입력안내</em></a>
+                        <span class="guide">주로 사용하는 이메일 주소를 입력해 주세요. 비밀번호 재설정 등 주요 기능에 꼭 필요한 사항입니다.</span>
+                      </span>
+                    </div>
+                    <div class="ct-form invalid icon-left">
+                      <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                      <span class="error">
+                        <a href="#"><em>입력안내</em></a>
+                        <span class="guide">주로 사용하는 이메일 주소를 입력해 주세요. 비밀번호 재설정 등 주요 기능에 꼭 필요한 사항입니다.</span>
+                      </span>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.valid</span></td>
+                  <td>유효함</td>
+                </tr>
+                <tr>
+                  <td>icon-left + help</td>
+                  <td>
+                    <div class="ct-form icon-left">
+                      <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                      <span class="help">
+                        <a href="#"><em>입력안내</em></a>
+                        <span class="guide">주로 사용하는 이메일 주소를 입력해 주세요. 비밀번호 재설정 등 주요 기능에 꼭 필요한 사항입니다.</span>
+                      </span>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.valid</span></td>
+                  <td>유효함</td>
+                </tr>
+                <tr>
+                  <td>icon + valid</td>
+                  <td>
+                    <div class="ct-form label icon-left valid">
+                      <label for="">E-mail</label>
+                      <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      <span class="help">
+                        <a href="#"><em>입력안내</em></a>
+                        <span class="guide">주로 사용하는 이메일 주소를 입력해 주세요. 비밀번호 재설정 등 주요 기능에 꼭 필요한 사항입니다.</span>
+                      </span>
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                    </div>
+                    <div class="ct-form label icon-right invalid">
+                      <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      <span class="icon"><i class="fa-solid fa-lock fa-fw"></i></span>
+                      <span class="help">
+                        <a href="#"><em>입력안내</em></a>
+                        <span class="guide">주로 사용하는 이메일 주소를 입력해 주세요. 비밀번호 재설정 등 주요 기능에 꼭 필요한 사항입니다.</span>
+                      </span>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.invalid</span></td>
+                  <td>icon-right, help는 숨김</td>
+                </tr>
+
+                <tr>
+                  <th rowspan="10">확장형</th>
+                  <td>normal</td>
+                  <td>
+                    <div class="ct-form-group">
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.ct-form-group</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>icon</td>
+                  <td>
+                    <div class="ct-form-group">
+                      <span><i class="fa-solid fa-lock fa-fw"></i></span>
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                    </div>
+                    <div class="ct-form-group">
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                      <span><i class="fa-solid fa-lock fa-fw"></i></span>
+                    </div>
+                    <div class="ct-form-group">
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                      <span>Kg</span>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.ct-form-group</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>label (box)</td>
+                  <td>
+                    <div class="ct-form-group">
+                      <label for="" class="box"><em>*</em>E-mail</label>
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                    </div>
+                    <div class="ct-form-group">
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                      <label for="" class="box"><em>*</em>E-mail</label>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.ct-form-group</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>label (top)</td>
+                  <td>
+                    <div class="ct-form-group">
+                      <label for="" class="top"><em>*</em>E-mail</label>
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                    </div>
+                    <div class="ct-form-group">
+                      <label for="" class="top"><em>*</em>E-mail</label>
+                      <a href="#"><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></a>
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.ct-form-group</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>button</td>
+                  <td>
+                    <div class="ct-form-group">
+                      <a href="#"><i class="fa-solid fa-search fa-fw"><span>검색</span></i></a>
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                    </div>
+                    <div class="ct-form-group">
+                      <a href="#">기업조회</a>
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                    </div>
+                    <div class="ct-form-group">
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                      <a href="#"><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></a>
+                    </div>
+                    <div class="ct-form-group">
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                      <a href="#">중복확인</a>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.ct-form-group</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>조합 (separator)</td>
+                  <td>
+                    <div class="ct-form-group">
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                      <a href="#" class="last"><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></a>
+                      <span class="separator">~</span>
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                      <a href="#"><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></a>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.ct-form-group</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>조합 (label)</td>
+                  <td>
+                    <div class="ct-form-group">
+                      <label for="" class="top"><em>*</em>시작일 / 종료일</label>
+                      <span><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></span>
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                      <a href="#" class="last"><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></a>
+                      <span class="separator">~</span>
+                      <span><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></span>
+                      <div class="ct-form">
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                      <a href="#"><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></a>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.ct-form-group</span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>조합 (label)</td>
+                  <td>
+                    <div class="ct-form-group">
+                      <span><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></span>
+                      <div class="ct-form label">
+                        <label for=""><em>*</em>시작일</label>
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                      <a href="#" class="last"><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></a>
+                      <span class="separator">~</span>
+                      <span><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></span>
+                      <div class="ct-form label">
+                        <label for=""><em>*</em>종료일</label>
+                        <input type="text" name="test_1" id="test-1" class="ct-text" placeholder="xxx@naver.com" value="">
+                      </div>
+                      <a href="#"><i class="fa-regular fa-calendar-check fa-fw"><span>일자선택</span></i></a>
+                    </div>
+                  </td>
+                  <td><span class="class-name">.ct-form-group</span></td>
+                  <td></td>
+                </tr>
+
+
+
+
+
+                <!--
+                <tr>
+                  <th>확장형</th>
+                  <td>
+                    <div class="ct-form-group">
+                      <div class="ct-form">
+                        <label for="input-name-1"><em>*</em>이메일</label>
+                        <input type="text" name="input_name_1" id="input-name-1" class="text" placeholder="xxxxxx@naver.com">
+                        <span class="status"><em>유효함</em><em>유효하지 않음</em></span>
+                        <span class="help">
+                          <a href="#">입력안내</a>
+                          <span class="guide">주로 사용하는 이메일 주소를 입력해 주세요. 비밀번호 재설정 등 주요 기능에 꼭 필요한 사항입니다.</span>
+                        </span>
+                      </div>
+                      <span class="message">* 이메일 주소를 형식(xxxx@naver.com)에 맞게 입력해 주세요.</span>
+                    </div>
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>기본형(유효성 O)</th>
+                  <td>
+                    <div class="ct-form-group">
+                      <div class="ct-form valid">
+                        <label for="input-name-1"><em>*</em>이메일</label>
+                        <input type="text" name="input_name_1" id="input-name-1" class="text" placeholder="xxxxxx@naver.com">
+                        <span class="status"><em>유효함</em><em>유효하지 않음</em></span>
+                        <span class="help">
+                          <a href="#">입력안내</a>
+                          <span class="guide">주로 사용하는 이메일 주소를 입력해 주세요. 비밀번호 재설정 등 주요 기능에 꼭 필요한 사항입니다.</span>
+                        </span>
+                      </div>
+                      <span class="message">* 이메일 주소를 형식(xxxx@naver.com)에 맞게 입력해 주세요.</span>
+                    </div>
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>기본형(유효성 X)</th>
+                  <td>
+                    <div class="ct-form-group">
+                      <div class="ct-form invalid">
+                        <label for="input-name-1"><em>*</em>이메일</label>
+                        <input type="text" name="input_name_1" id="input-name-1" class="text" placeholder="xxxxxx@naver.com">
+                        <span class="status"><em>유효함</em><em>유효하지 않음</em></span>
+                        <span class="help">
+                          <a href="#">입력안내</a>
+                          <span class="guide">주로 사용하는 이메일 주소를 입력해 주세요. 비밀번호 재설정 등 주요 기능에 꼭 필요한 사항입니다.</span>
+                        </span>
+                      </div>
+                      <span class="message">* 이메일 주소를 형식(xxxx@naver.com)에 맞게 입력해 주세요.<br />이메일 주소를 형식(xxxx@naver.com)에 맞게 입력해 주세요</span>
+                    </div>
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+-->
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+      </main>
+
+      <footer id="footer">
+        <p class="copyright">COPYRIGHT ⓒ 2022 SNC LAB, INC. ALL RIGHTS RESERVED.</p>
+      </footer>
+
+    </div> <!-- #wrapper  -->
+
+<script>
+'use strict';
+
+
+
+
+</script>
+
+  </body>
+</html>
+
+
